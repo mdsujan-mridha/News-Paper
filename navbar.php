@@ -34,7 +34,7 @@
   </head>
   <body>
     <ul>
-      <li style="margin-left:0px;"> <a href="#">News Sharing Site</a> </li>
+      <li style="margin-left:0px;"> <a href="#"> Green New </a> </li>
       <li style="margin-left:800px;"> <a href="#">Home</a> </li>
       <li> <a href="#">Contact</a> </li>
       <li> <a href="#">About</a> </li>

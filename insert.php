@@ -48,7 +48,7 @@
 
         move_uploaded_file($image_tem_loc,$image_store);
 
-        $sql="INSERT INTO news(news,image) values('$news','$image')";
+        $sql="INSERT INTO create_news(news,images) values('$news','$image')";
         $query=mysqli_query($conn,$sql);
 
       }
