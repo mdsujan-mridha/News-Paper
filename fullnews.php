@@ -31,14 +31,14 @@
 
     $id=$_POST['id'];
 
-    $sql="SELECT * from news where id='$id'";
+    $sql="SELECT * from create_news where id='$id'";
     $query=mysqli_query($conn,$sql);
 
     while ($info=mysqli_fetch_array($query)) {
       ?>
         <div class="div1">
           <p><?php echo $info['date']; ?></p>
-          <img src="image/<?php echo $info['image']; ?>" alt="">
+          <img src="image/<?php echo $info['images']; ?>" alt="">
           <div class="div2">
             <?php echo $info['news']; ?>
 

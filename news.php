@@ -2,94 +2,40 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>News Sharing Site</title>
-    <style media="screen">
-      body{
-        background-color: azure;
-      }
-      .div1{
-        border: 2px solid black;
-        width: 470px;
-        float: left;
-        margin-left: 10px;
-        padding-bottom: 15px;
-        margin-top: 15px;
-      }
-      .div2{
-        width: 200px;
-        border: 1px solid white;
-        max-height: 150px;
-        overflow: hidden;
-        float: left;
-        margin-top: 10px;
-        margin-left: 10px;
-        padding: 1px;
-        font-size: 23px;
-        font-weight: bold;
-      }
-      img{
-        width: 220px;
-        height: 160px;
-        float: left;
-        margin-left: 20px;
-        margin-top: 10px;
-      }
-      .divmain{
-        margin-left: 60px;
-      }
-      .div3{
-        float: left;
-        margin-top: 10px;
-        margin-right: 200px;
+    <title> Green News </title>
+    <!-- <style media="screen">
+      
+    </style> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-      }
-      #label1{
-        font-size: 20px;
-        font-weight: bold;
-        margin-left: 60px;
-      }
-      #label2{
-        font-size: 20px;
-        font-weight: bold;
-        margin-left: 14px;
-      }
-      form{
-        margin-top: -60px;
-        float: right;
-        margin-right: 55px;
-
-      }
-      #readfullnews{
-        font-size: 20px;
-        font-weight: bold;
-      }
-    </style>
+  <link rel="stylesheet" href="home-style.css">
   </head>
   <body>
     <?php include 'navbar.php' ?>
     <br><br>
-    <div class="divmain">
+    <div class="container news-container">
       <?php
       include 'db.php';
 
-      $sql="SELECT * from news order by id desc";
+      $sql="SELECT * from create_news order by id desc";
       $query=mysqli_query($conn,$sql);
 
       while ($info=mysqli_fetch_array($query)) {
         ?>
 
-        <div class="div1">
-          <img src="image/<?php echo $info['image']; ?>" alt="">
-          <div class="div2">
+        <div class="news-content">
+          <img class=news-img src="image/<?php echo $info['images']; ?>" alt="">
+          <div class="news-date-container">
+           <p class="day-date"> <span>  Day: </span> <?php echo formatDate3($info['date']); ?></p> 
+           <p class="day-date"> <span>  Date: </span> <?php echo formatDate1($info['date']); ?></p>
+           <p class="time"> <span>  Time: </span> <?php echo formatDate2($info['date']); ?></p>
+
+          </div>
+          <div class="new-from-data">
             <?php echo $info['news']; ?>
           </div>
 
-          <div class="div3">
-            <label id="label1"> <?php echo formatDate3($info['date']); ?> </label><br><br>
-            <label id="label2"> <?php echo formatDate1($info['date']); ?></label>
-            <label id="label2"> <?php echo formatDate2($info['date']); ?> </label>
-
-          </div>
+          
           <form class="" action="fullnews.php" method="post">
             <input type="text" name="id" value="<?php echo $info['id']; ?>" hidden>
             <input id="readfullnews" type="submit" name="fullnews" value="Read Full News">
@@ -104,6 +50,7 @@
       ?>
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   </body>
 </html>
