@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>News Website</title>
+    <title> Green News </title>
     <style media="screen">
       body{
         padding: 0px;
@@ -10,7 +10,7 @@
       }
       ul{
         list-style-type: none;
-        background-color: teal;
+        background-color: black;
         width: 100%;
         height: 50px;
         margin-top: 0px;
@@ -34,9 +34,9 @@
   </head>
   <body>
     <ul>
-      <li style="margin-left:0px;"> <a href="#"> Green New </a> </li>
-      <li style="margin-left:800px;"> <a href="#">Home</a> </li>
-      <li> <a href="#">Contact</a> </li>
+      <li style="margin-left:0px;"> <a href="#"> Green News </a> </li>
+      <li style="margin-left:800px;"> <a href="/news.php">Home</a> </li>
+      <li> <a href="/about">Contact</a> </li>
       <li> <a href="#">About</a> </li>
       <li> <a href="#">Service</a> </li>
       <li> <a href="#">Update</a> </li>
