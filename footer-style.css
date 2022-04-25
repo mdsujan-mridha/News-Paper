@@ -1,3 +1,37 @@
 .footer{
     background: black;
+    margin-top: 150px;
+    padding: 100px;
+}
+
+.left-corner{
+    text-align: justify;
+}
+.left-corner h4{
+    color: #fff;
+
+}
+.left-corner p{
+    color: #fff;
+    opacity: 0.6;
+}
+.middle-corner {
+    color: #fff;
+}
+.middle-corner ul{
+    display: flex;
+    flex-direction: column;
+    margin-left: 97px;
+   
+}
+.right-corner{
+    text-align: center;
+    color: #fff;
+   
+}
+.right-corner ul{ 
+
+    display: flex;
+    flex-direction: column;
+    color: orange;
 }

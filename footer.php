@@ -16,15 +16,37 @@
   <div class="container"> 
        <div class="row">
            <div class="col-12 col-md-3 col-lg-4"> 
-              <h4> About </h4>       
+               <div class="left-corner">
+               <h4> About </h4>  
+               <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, excepturi ducimus deleniti autem veniam aut rerum qui vel nobis ea! Lorem ipsum dolor sit.</p>
+               </div>     
         </div>
            <div class="col-12 col-md-3 col-lg-4"> 
-              <h4> Quick Link </h4>       
+             <div class="middle-corner"> 
+             <h4 class="text-center"> Quick Link </h4> 
+              <ul> 
+                  <li><a href="home"> Home </a></li>
+                  <li><a href="#"> Contact </a></li>
+                  <li><a href="#"> About </a></li>
+                  <li><a href="#"> Service </a></li>
+              </ul>
+              
+             </div>      
         </div>
            <div class="col-12 col-md-3 col-lg-4"> 
-               <h4> Follow us with </h4>
+              <div class="right-corner"> 
+              <h4> Follow us with </h4>
+               <ul>
+                   <li> Facebook </li>
+                   <li> Instagram </li>
+                   <li> Twitter </li>
+                   <li> Whatsapp </li>
+               </ul>
+              </div>
            </div>
+          
        </div>
+       
  </div>      
 
 
